@@ -74,6 +74,7 @@
 <body>
 <div class="main">
   <div class="wrapper">
+    <h1 style="text-align:center;font-family:'Segoe UI';color:white;" id="wishBday"></h1>
       <div id="quoteBox">
           <h3 id="quoteTitle">
             <b id="date">Quote of the day : </b>
@@ -105,6 +106,9 @@
       var quote=data.contents.quotes[0].quote;
       var author=data.contents.quotes[0].author;
       var date=data.contents.quotes[0].date;
+      var split=date.split("-");
+      
+      
       //console.log(status);
       $("#date").html('Quote of the Day : '+date);
       $("#quote").html(quote);
