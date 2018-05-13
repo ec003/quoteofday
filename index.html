@@ -108,6 +108,10 @@
       var date=data.contents.quotes[0].date;
       var split=date.split("-");
       
+      if(split[1]=="05" && split[2]=="14"){
+      	$("#wishBday").innerHTML("Happy Birthday Sana!!");
+      }
+     
       
       //console.log(status);
       $("#date").html('Quote of the Day : '+date);
