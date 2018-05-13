@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quote of the Day</title>
+
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    .main {
+      height: 100%;
+      width: 100%;
+      display: table;
+    }
+
+    .wrapper {
+      display: table-cell;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    body {
+      background-color: #0288d1;
+    }
+
+    #quoteBox {
+      border: 2px solid white;
+      border-radius: 1em;
+      padding: 1em;
+      margin: 2em;
+    }
+
+    #quote {
+      color: white;
+      font-family: Roboto;
+      font-size: 2em;
+    }
+
+    #author {
+      color: white;
+      font-family: Roboto;
+      font-size: 1em;
+
+      text-align: right;
+
+    }
+
+    #quoteTitle {
+      color: white;
+      font-family: Roboto;
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+  </style>
+
+</head>
+
+<body>
+<div class="main">
+  <div class="wrapper">
+      <div id="quoteBox">
+          <h3 id="quoteTitle">
+            <b id="date">Quote of the day : </b>
+          </h3>
+          <div id="quote">
+            Stress is like a pulse, if you have it you're alive.
+      
+          </div>
+          <div id="author">
+            <i> -Steve Maraboli</i>
+          </div>
+      
+      
+        </div>
+  <h6 style="text-align:center;font-family:'Segoe UI';font-size:1.5em;color:white;">Best wishes from 0801EC141003</h6>
+        
+  </div>
+</div>
+  
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script>
+    $.get("https://quotes.rest/qod?category=inspire",function(data,status){
+      
+      var quote=data.contents.quotes[0].quote;
+      var author=data.contents.quotes[0].author;
+      var date=data.contents.quotes[0].date;
+      //console.log(status);
+      $("date").html('Quote of the Day :'+date);
+      $("quote").html('- '+quote);
+      $("author").html(author+" pasted");
+
+    });
+  </script>
+</body>
+
+</html>
