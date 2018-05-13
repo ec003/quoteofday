@@ -79,11 +79,11 @@
             <b id="date">Quote of the day : </b>
           </h3>
           <div id="quote">
-            Stress is like a pulse, if you have it you're alive.
+          
       
           </div>
           <div id="author">
-            <i> -Steve Maraboli</i>
+            <i id="authorName"> -Steve Maraboli</i>
           </div>
       
       
@@ -100,25 +100,20 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script>
-   /* $.get("https://quotes.rest/qod?category=inspire",function(data,status){
+   $.get("https://quotes.rest/qod?category=inspire",function(data,status){
       
       var quote=data.contents.quotes[0].quote;
       var author=data.contents.quotes[0].author;
       var date=data.contents.quotes[0].date;
       //console.log(status);
-      $("date").html('Quote of the Day :'+date);
-      $("quote").html('- '+quote);
-      $("author").html(author+" pasted");
+      $("#date").html('Quote of the Day :'+date);
+      $("#quote").html(quote);
+      $("#authorName").html('- '+author);
 
-    });*/
+    });
     
-      var quote="Random quote";
-      var author="adarsh mishra";
-      var date="2018-05-14";
-      //console.log(status);
-      $("date").html('Quote of the Day :'+date);
-      $("quote").html('- '+quote);
-      $("author").html(author+" pasted");
+
+     
   </script>
 </body>
 
