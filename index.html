@@ -100,7 +100,7 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script>
-    $.get("https://quotes.rest/qod?category=inspire",function(data,status){
+   /* $.get("https://quotes.rest/qod?category=inspire",function(data,status){
       
       var quote=data.contents.quotes[0].quote;
       var author=data.contents.quotes[0].author;
@@ -110,7 +110,15 @@
       $("quote").html('- '+quote);
       $("author").html(author+" pasted");
 
-    });
+    });*/
+    
+      var quote="Random quote";
+      var author="adarsh mishra";
+      var date="2018-05-14";
+      //console.log(status);
+      $("date").html('Quote of the Day :'+date);
+      $("quote").html('- '+quote);
+      $("author").html(author+" pasted");
   </script>
 </body>
 
